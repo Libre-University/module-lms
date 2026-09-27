@@ -4,8 +4,8 @@
 
 ## Faz 0: Hazırlık (davet öncesi)
 
-- [ ] `platform-api` modül şablonundan paket iskeleti (`libre-university-lms`)
-- [ ] CI: ruff, mypy, pytest (modül test düzeneğiyle), migration kontrolü
+- [ ] `platform-api` modül şablonundan (`gonew`) Go modülü iskeleti (`github.com/Libre-University/module-lms`), `core.Register` ile kayıt
+- [ ] CI: gofmt, go vet, golangci-lint, `go test -race` (`core/coretest` ile), sqlc/goose migration kontrolü
 - [ ] LMS iş kurallarının Given/When/Then kabul kriterleri olarak yazılması
 - [ ] `module-obs` ile bağımlılık sözleşmesi taslağı (şube ve kayıt sorguları)
 
