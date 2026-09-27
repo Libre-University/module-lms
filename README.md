@@ -2,7 +2,7 @@
 
 LibreUniversity **Öğrenme Yönetim Sistemi (LMS)** modülü: ders sayfaları, materyal, duyuru, ödev ve Jitsi tabanlı canlı ders ([MODULES.md §3](https://github.com/Libre-University/docs/blob/main/MODULES.md), [FR-03](https://github.com/Libre-University/docs/blob/main/FUNCTIONAL_REQUIREMENTS.md)).
 
-Bu repo, `platform-api` uygulamasına kurulan bağımsız bir Django uygulama paketidir (`libre-university-lms`). Şube ve kayıt bilgisini `module-obs`'in genel servis API'sinden, canlı ders altyapısını `adapters` reposundaki `LiveClassroom` adapterlerinden (Jitsi, BigBlueButton) alır ([ADR-0010](https://github.com/Libre-University/docs/blob/main/docs/adr/0010-develop-modules-as-separate-packages.md)).
+Bu repo, `platform-api`'ye derleme sırasında eklenen bağımsız bir Go modülüdür (`github.com/Libre-University/module-lms`). Şube ve kayıt bilgisini `module-obs`'in genel servis API'sinden, canlı ders altyapısını `adapters` reposundaki `LiveClassroom` adapterlerinden (Jitsi, BigBlueButton) alır ([ADR-0010](https://github.com/Libre-University/docs/blob/main/docs/adr/0010-develop-modules-as-separate-packages.md)).
 
 ## Ne İş Yapar?
 
@@ -21,7 +21,7 @@ Bu repo, `platform-api` uygulamasına kurulan bağımsız bir Django uygulama pa
 
 | Faz | Bu repoda yapılacaklar |
 | --- | --- |
-| Faz 0 | Modül şablonundan iskelet, CI, LMS iş kurallarının kabul kriterleri olarak yazılması |
+| Faz 0 | Go modül şablonundan iskelet, CI, LMS iş kurallarının kabul kriterleri olarak yazılması |
 | Faz 1 | Bu repoda iş yok (çekirdek platform bekleniyor) |
 | Faz 2 | `CoursePage` ve `LearningMaterial` temeli, şube erişim kuralları |
 | Faz 3 | Duyuru, forum, ödev teslimi, Jitsi / BigBlueButton canlı ders (MVP'nin LMS akışları) |
