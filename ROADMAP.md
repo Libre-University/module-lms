@@ -19,11 +19,12 @@
 
 - [ ] Haftalık izlence, duyuru, forum
 - [ ] `Assignment`, `AssignmentSubmission`, geç teslim işaretleme
-- [ ] `LiveSession`: Jitsi adapteri ile JWT, yalnızca yetkili akademisyenin başlatması
+- [ ] `LiveSession`: `LiveClassroom` portu üzerinden, yalnızca yetkili akademisyenin başlatması
+- [ ] Canlı ders sağlayıcısının seçilebilmesi: Jitsi (gömülü) veya BigBlueButton ([#4](https://github.com/Libre-University/module-lms/issues/4))
 - [ ] Bildirim entegrasyonu (yeni materyal, ödev hatırlatma)
 
 ## Faz 4+
 
-- [ ] Jibri kayıtlarının VOD olarak izlenceye eklenmesi
+- [ ] Jitsi (Jibri) ve BigBlueButton kayıtlarının ortak modelle izlenceye eklenmesi
 - [ ] Online sınav ve soru bankası
 - [ ] Açık kaynak intihal denetimi entegrasyonu

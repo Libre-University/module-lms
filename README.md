@@ -2,7 +2,7 @@
 
 LibreUniversity **Öğrenme Yönetim Sistemi (LMS)** modülü: ders sayfaları, materyal, duyuru, ödev ve Jitsi tabanlı canlı ders ([MODULES.md §3](https://github.com/Libre-University/docs/blob/main/MODULES.md), [FR-03](https://github.com/Libre-University/docs/blob/main/FUNCTIONAL_REQUIREMENTS.md)).
 
-Bu repo, `platform-api` uygulamasına kurulan bağımsız bir Django uygulama paketidir (`libre-university-lms`). Şube ve kayıt bilgisini `module-obs`'in genel servis API'sinden, canlı ders altyapısını `adapters` reposundaki Jitsi adapterinden alır ([ADR-0010](https://github.com/Libre-University/docs/blob/main/docs/adr/0010-develop-modules-as-separate-packages.md)).
+Bu repo, `platform-api` uygulamasına kurulan bağımsız bir Django uygulama paketidir (`libre-university-lms`). Şube ve kayıt bilgisini `module-obs`'in genel servis API'sinden, canlı ders altyapısını `adapters` reposundaki `LiveClassroom` adapterlerinden (Jitsi, BigBlueButton) alır ([ADR-0010](https://github.com/Libre-University/docs/blob/main/docs/adr/0010-develop-modules-as-separate-packages.md)).
 
 ## Ne İş Yapar?
 
@@ -10,7 +10,7 @@ Bu repo, `platform-api` uygulamasına kurulan bağımsız bir Django uygulama pa
 - Materyal paylaşımı (PDF, video, bağlantı, metin)
 - Duyuru ve tartışma forumu
 - Ödev tanımı ve teslimi, geç teslim işaretleme
-- Jitsi canlı ders: yetkili başlatma, JWT ile moderatör/katılımcı rolleri
+- Canlı ders: yetkili başlatma, moderatör/katılımcı rolleri; sağlayıcı seçilebilir (Jitsi veya BigBlueButton)
 - İleride: kayıtların VOD olarak izlenceye eklenmesi, online sınav
 
 ## Sahip Olduğu Veriler
@@ -24,7 +24,7 @@ Bu repo, `platform-api` uygulamasına kurulan bağımsız bir Django uygulama pa
 | Faz 0 | Modül şablonundan iskelet, CI, LMS iş kurallarının kabul kriterleri olarak yazılması |
 | Faz 1 | Bu repoda iş yok (çekirdek platform bekleniyor) |
 | Faz 2 | `CoursePage` ve `LearningMaterial` temeli, şube erişim kuralları |
-| Faz 3 | Duyuru, forum, ödev teslimi, Jitsi canlı ders (MVP'nin LMS akışları) |
+| Faz 3 | Duyuru, forum, ödev teslimi, Jitsi / BigBlueButton canlı ders (MVP'nin LMS akışları) |
 | Faz 4+ | VOD kayıt hattı, online sınav, intihal denetimi entegrasyonu |
 
 Ayrıntılı ve işaretlenebilir liste: [ROADMAP.md](ROADMAP.md). Fazlar [ana yol haritası](https://github.com/Libre-University/docs/blob/main/ROADMAP.md) ile hizalıdır. Açık işler için `phase:*` etiketlerine bakın.
